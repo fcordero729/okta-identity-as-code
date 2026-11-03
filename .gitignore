@@ -1,0 +1,15 @@
+# Terraform working files and state (state can hold secrets)
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!example.tfvars
+
+# Local secrets
+.env
+
+# Python
+__pycache__/
+.venv/
+*.csv
