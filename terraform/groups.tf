@@ -1,5 +1,5 @@
 resource "okta_group" "it" {
-  name        = "IT   "
+  name   =      "IT"
   description = "IT department, assigned by group rule"
 }
 
