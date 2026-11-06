@@ -16,6 +16,11 @@ resource "okta_user" "lab" {
   department = each.value.dept
   status     = lookup(each.value, "status", "ACTIVE")
   password   = var.test_password
+
+  # Refuse to delete any user. Remove this block on purpose to allow a deletion.
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 # Privileged access is granted explicitly, never by rule.
