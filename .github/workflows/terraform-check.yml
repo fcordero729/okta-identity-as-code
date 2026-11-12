@@ -26,4 +26,4 @@ jobs:
           python-version: "3.12"
 
       - name: Python syntax
-        run: python -m py_compile scripts/inactive_users.py
+        run: python -m py_compile scripts/*.py
