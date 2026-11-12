@@ -4,7 +4,7 @@ locals {
     jamie  = { first = "Jamie", last = "Chen", dept = "Finance", status = "DEPROVISIONED" }
     sam    = { first = "Sam", last = "Patel", dept = "Finance" }
     taylor = { first = "Taylor", last = "Brooks", dept = "Finance", status = "SUSPENDED" }
-    casey  = { first = "Casey", last = "Nguyen", dept = "IT" }
+    casey  = { first = "Casey", last = "Nguyen", dept = "IT", status = "SUSPENDED" }
   }
 }
 
@@ -28,5 +28,5 @@ resource "okta_user" "lab" {
 # Privileged access is granted explicitly, never by rule.
 resource "okta_group_memberships" "app_admins" {
   group_id = okta_group.app_admins.id
-  users    = [okta_user.lab["alex"].id, okta_user.lab["casey"].id]
+  users    = [okta_user.lab["alex"].id]
 }
