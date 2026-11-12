@@ -1,7 +1,7 @@
 # Okta Identity as Code
 
-An Okta tenant managed entirely with Terraform, with a Python access report
-and GitHub Actions checks on every change.
+An Okta tenant managed with Terraform, with SCIM provisioning, Okta Workflows
+automation, a Python access report and GitHub Actions checks on every change.
 
 ## What it demonstrates
 - Joiner, mover, leaver: department-based group rules, and suspension in code
